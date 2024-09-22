@@ -1,8 +1,9 @@
-
-import 'pigeon_bug_platform_interface.dart';
+import 'messages.g.dart';
 
 class PigeonBug {
-  Future<String?> getPlatformVersion() {
-    return PigeonBugPlatform.instance.getPlatformVersion();
+  final IntPigeonBugApi _api = IntPigeonBugApi();
+
+  Future<void> testIntFunction(final int number) {
+    return _api.testIntFunction(number);
   }
 }
